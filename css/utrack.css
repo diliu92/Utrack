@@ -1,0 +1,145 @@
+/* Put any additional CSS here */
+
+/*General*/
+#app-container{
+	float: center;
+	text-align: center;
+}
+
+#nav_div{
+	margin: 25px 0 40px 0;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+#input-div, #analysis-div{
+	position: relative;
+	display: inline-block;
+	min-width: 320px;
+	max-width: 640px;
+	width: 100%;
+	text-align: left;
+	margin-bottom: 50px;
+}
+
+/*input view css*/
+#input-div .input-field-container{
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px dashed #aaa;
+}
+
+#input-div p,
+#input-div input,
+#input-div select {
+	display: inline-block;
+}
+
+#input-div .input-label{
+	width: 123px;
+}
+
+#input-div .input-value{
+	width: 8px;
+	font-weight: normal;
+}
+
+#input-div .input-descrption{
+	margin: 0 0 0 5px;
+	color: #777;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 11.7px;
+	max-width: 184px;
+}
+
+#input-div .input-slider{
+	min-width: 197px;
+	max-width: 517px;
+	margin-left: 125px;
+	width: calc(100% - 125px);
+}
+
+#input-div #input-time-txtbox{
+	width: 100px；
+}
+
+#input-div #input-submit-div{
+	position: relative;
+	padding-right: 70px;
+}
+
+#input-div #input-last-entry-value{
+	font-weight: normal;
+	margin-top: 10px;
+}
+
+#input-div #input-add-btn{
+	position: absolute;
+	right: 0;
+	font-weight: bold;
+}
+#input-div #input-remove-btn{
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+#input-div #input-remove-last-btn{
+	font-weight: bold;
+}
+
+/*analysis view css*/
+#analysis-div #analysis-menu-container{
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: inline-block;
+	width: 120px;
+}
+
+#analysis-div #analysis-menu-label{
+	font-weight: bold;
+}
+
+#analysis-div #analysis-menu input{
+	margin-right: 5px;
+	margin-top: 10px;
+}
+
+#analysis-div #analysis-display-container{
+	margin-left: 130px;
+	display: inline-block;
+	min-width: 190px;
+	max-width: 510px;
+	width: calc(100% - 130px);
+	min-height: 150px;
+	border-left: 1px solid #ddd;
+}
+
+#analysis-div #analysis-table{
+	min-width: 150px;
+	max-width: 470px;
+	width: calc(100% - 50px);
+	margin-left: 40px;
+	border: 2px solid #aaa;
+}
+
+#analysis-div #analysis-table td{
+	border-bottom: 1px solid #aaa;
+	padding: 5px;
+	text-align: right;
+}
+
+#analysis-div #analysis-table td:first-child {
+	border-right: 1px solid #aaa;
+	text-align: left;
+}
+
+#analysis-div #analysis-table #analysis-table-titles td{
+	border-bottom: 2px solid #aaa;
+	font-weight: bold;
+	text-align: center;
+}
+
+#analysis-div #analysis-canvas{
+	margin-left: 25px
+}

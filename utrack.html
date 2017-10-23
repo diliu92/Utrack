@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>UTrack!</title>
+    <link rel="stylesheet" href="css/ext/bootstrap.css"/>
+    <link rel="stylesheet" href="css/utrack.css"/>
+</head>
+<body>
+
+    <div id="app-container" class="container">
+
+        <header>
+            <h1>UTrack! <small>Track and analyze data that matters to you!</small></h1>
+        </header>
+        <div id="nav_div">
+            <!-- For the usages of row and col classes, refer to Bootstrap API -->
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <ul class="nav nav-tabs nav-justified">
+                        <li id="nav-input-tab" class="active"><a href="#input">Input</a></li>
+                        <li id="nav-analysis-tab"><a href="#analysis">Analysis</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="input-div">
+            <!-- <h2>Input Div</h2> -->
+            <!-- Put HTML here to support user input of data -->
+            <div id="input-activity-div" class="input-field-container">
+                <label id="input-activity-label" class="input-label">Activity: </label>
+                <select id="input-activity-select">
+                    <option value="Writing Code">Writing Code</option>
+                    <option value="Eating Dinner">Eating Dinner</option>
+                    <option value="Playing Sports">Playing Sports</option>
+                    <option value="Studying for Exams">Studying for Exams</option>
+                    <option value="Attending Lectures">Attending Lectures</option>
+                </select>
+            </div>
+            <div id="input-energy-div" class="input-field-container">
+                <label id="input-energy-label" class="input-label">Energy Level: </label>
+                <label id="input-energy-value" class="input-value">3</label>
+                <label id="input-energy-descrption" class="input-descrption">(1 = exhausted, 5 = very awake)</label>
+                <input type="range" id="input-energy-slider" class="input-slider" min="1" max="5"></input>
+                </div>
+            <div id="input-stress-div" class="input-field-container">
+                <label id="input-stress-label" class="input-label">Stress Level: </label>
+                <label id="input-stress-value" class="input-value">3</label>
+                <label id="input-stress-descrption" class="input-descrption">(1 = very stressed, 5 = very relaxed)</label>
+                <input type="range" id="input-stress-slider" class="input-slider" min="1" max="5"></input>
+                </div>
+            <div id="input-happiness-div" class="input-field-container">
+                <label id="input-happiness-label" class="input-label">Happiness Level: </label>
+                <label id="input-happiness-value" class="input-value">3</label>
+                <label id="input-happiness-descrption" class="input-descrption">(1 = depressed, 5 = very happy)</label>
+                <input type="range" id="input-happiness-slider" class="input-slider" min="1" max="5"></input>
+                </div>
+            <div id="input-time-div" class="input-field-container">
+                <label id="input-time-label" class="input-label">Time Spent: </label>
+                <input type="text" id="input-time-txtbox" value="0"></input>
+                <label id="input-time-descrption" class="input-descrption">minutes</label>
+                </div>
+            <div id="input-submit-div">
+                <input type="submit" id="input-remove-btn" class="input-submit" value="Remove Entry With The Same Values">
+                <input type="submit" id="input-remove-last-btn" class="input-submit" value="Remove The Last Entry">
+                <input type="submit" id="input-add-btn" class="input-submit" value="Add As New Data">
+                <label id="input-last-entry-label">Last Data Entry was: </label>
+                <label id="input-last-entry-value">N/A</label>
+            </div>
+        </div>
+        <div id="analysis-div" class="hidden">
+            <!-- <h2>Analysis Div</h2> -->
+            <!-- Put HTML here to support users in analyzing their data -->
+            <div id="analysis-menu-container">
+                <label id="analysis-menu-label">Views:</label>
+                <form id="analysis-menu">
+                    <input type="radio" name="graph-type" value="Table Summary" checked>Table Summary</input>
+                    <br/>
+                    <input type="radio" name="graph-type" value="Bar Graph">Bar Graph</input>
+                    <br/>
+                    <input type="radio" name="graph-type" value="Pie Chart">Pie Chart</input>
+                </form>
+            </div>
+            <div id="analysis-display-container">
+                <table id="analysis-table"></table>
+                <canvas id="analysis-canvas" class="hidden"></canvas>
+            </div>
+        </div>
+
+        <footer>
+            <div id="unit-tests">
+                <!-- Keep this here so TAs can run your unit tests -->
+                <a href="unit_tests.html">Run Unit Tests</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="js/ext/underscore.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/utrack.js"></script>
+</body>
+</html>
